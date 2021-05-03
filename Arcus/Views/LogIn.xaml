@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Arcus.Views.LogIn"
+             
+             >
+    <ScrollView>
+        <Grid  BackgroundColor="#3AD2A8">
+            <Image Aspect="AspectFill" Source="drawable/background.jpg"></Image>
+            <!--<BoxView Opacity="0.5" Color="black"></BoxView>-->
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="drawable/arcuslogo.png" Margin="0,50,0,30"></Image>
+                <!--https://www.font-generator.com/fonts/Code/?size=46&bg=none&color=ffffff-->
+                <StackLayout  Grid.Row="1" Padding="30,20">
+                    <Label  Text="Login" FontSize="24" FontAttributes="Bold"/>
+                   
+                    <Entry  x:Name="UserEmail" Placeholder="Correo Electronico"  PlaceholderColor="White"></Entry>
+                    <Entry x:Name="UserPassword" Placeholder="Contraseña"  PlaceholderColor="White" IsPassword="True"></Entry>
+                    <Button x:Name="Login" Clicked="loginbutton_clicked"  Margin="0,20,0,0" Text="Iniciar Sesion" BackgroundColor="White" CornerRadius="20" TextColor="Black"></Button>
+                    <Button  x:Name="Register" Pressed="Register_Pressed"  Margin="0,20" Text="Registrarse" BackgroundColor="#4EB2CA" CornerRadius="20" TextColor="White"></Button>
+                    <StackLayout Padding="5">
+
+                        <Label FontSize="18" FontAttributes="Bold" TextColor="White" HorizontalOptions="StartAndExpand" TextDecorations="Underline" Text="Recuperar contraseña."/>
+                    </StackLayout>
+
+
+                </StackLayout>
+
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

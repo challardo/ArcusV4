@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Arcus.Views.Productos">
+
+    <ScrollView>
+    <StackLayout>
+        
+        <StackLayout BackgroundColor="LightBlue">
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                <Label Padding="30" HorizontalOptions="Center" FontSize="24" FontAttributes="Bold" Text="Inventario de productos"/>
+                <Label Margin="0,0,0,10" Text="Powered by FireBase" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <Entry x:Name="ID" Placeholder="Product Id"></Entry>
+                    <Entry x:Name="Nombre" Placeholder="Product Name"></Entry>
+                    <Entry x:Name="Categoria" Placeholder="Categoria"></Entry>
+                    <Entry x:Name="Descripcion" Placeholder="Descripcion"></Entry>
+                    <Entry x:Name="Cantidad" Placeholder="Cantidad"></Entry>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button x:Name="btnAdd" BackgroundColor="LightGreen" TextColor="Black" HorizontalOptions="Start" CornerRadius="20" WidthRequest="90" Text="Add" Clicked="BtnAdd_Clicked"/>
+                    <Button x:Name="btnRetrive" BackgroundColor="LightYellow" TextColor="Black" WidthRequest="90" CornerRadius="20" Text="Retrive" Clicked="BtnRetrive_Clicked"/>
+                    <Button x:Name="btnUpdate" BackgroundColor="LightSalmon"  TextColor="Black" WidthRequest="90" CornerRadius="20" Text="Update" Clicked="BtnUpdate_Clicked" />
+                    <Button x:Name="btnDelete"  BackgroundColor="LightCoral" TextColor="Black" WidthRequest="90" CornerRadius="20" Text="Delete" Clicked="BtnDelete_Clicked" />
+                    <!--<ImageButton Source=""/>-->
+                </StackLayout>
+
+                    
+                    <ListView ItemTapped="OnItemSelected" BackgroundColor="White"   x:Name="lstProductos" HorizontalOptions="Center" >
+                        <ListView.ItemTemplate >
+                        <DataTemplate>
+
+                                <TextCell   TextColor="Black" Detail="{Binding Nombre}"  Text="{Binding ProductoId}"></TextCell>
+                            
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+              
+                    <Label Text="start"/>
+                </StackLayout>
+        </StackLayout>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

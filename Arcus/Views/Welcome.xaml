@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Arcus.Views.Welcome">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalOptions="Center" Text="Welcome!" FontSize="48" FontAttributes="Bold"/>
+           
+            <Label Text="Welcome to Arcus inventory manager"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Padding="20" TextColor="Black" HorizontalOptions="Center" Text="Carlitos Cool dev"/>
+            <Image HorizontalOptions="Center" HeightRequest="100" Source="arcusIcon.png"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

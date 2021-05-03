@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Arcus.Views.SignIn">
+    <!--<ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Spacing="20" Margin="20" Orientation="Vertical">
+            <Entry  Placeholder="User new Email" x:Name="UserNewEmail"/>
+            <Entry  Placeholder="User new password" x:Name="UserNewPassword"/>
+            <Button BackgroundColor="Black" TextColor="White" Text="Sigin" Clicked="signupbutton_clicked" x:Name="signupbutton"/>
+        </StackLayout>
+    </ContentPage.Content>-->
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <Grid  BackgroundColor="#3AD2A8">
+                <Image Aspect="AspectFill" Source="/drawable/background.jpg"></Image>
+                <BoxView Opacity="0.5" Color="LightBlue"></BoxView>
+                <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Source="drawable/arcuslogo.png" Margin="0,50,0,30"></Image>
+        <!--https://www.font-generator.com/fonts/Code/?size=46&bg=none&color=ffffff-->
+        <StackLayout  Grid.Row="1" Padding="30,20">
+            <Label  Text="Register" FontSize="24" FontAttributes="Bold"/>
+           
+            <Entry  Placeholder="Correo electronico" x:Name="UserNewEmail"/>
+            <Entry  Placeholder="Contraseña" x:Name="UserNewPassword"/>
+          
+                        <Button BackgroundColor="White" TextColor="Black" Text="Register" CornerRadius="20" Clicked="signupbutton_clicked" x:Name="signupbutton"/>
+                    </StackLayout>
+
+    </Grid>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
